@@ -1,1 +1,163 @@
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Nexus Gaming Store: desktops, workstations, laptops y dispositivos móviles.">
+  <title>Nexus Gaming Store | Tecnología y Gaming</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#" aria-label="Nexus Gaming Store, inicio">
+      NEXUS<span>GG</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#pagos">Pagos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button id="cart-toggle" class="cart-button"
+      aria-label="Abrir carrito de compras">
+      🛒 Carrito <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">TECNOLOGÍA SIN LÍMITES</p>
+        <h1>ELEVA TU <span>EXPERIENCIA</span></h1>
+        <p>
+          Gaming, productividad y movilidad.
+          Encuentra el equipo perfecto para ti.
+        </p>
+        <a class="primary-button" href="#catalogo">Explorar catálogo ↗</a>
+        <div class="hero-tags">
+          <span>✦ Gaming</span>
+          <span>✦ Productividad</span>
+          <span>✦ Movilidad</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DESCUBRE TU PRÓXIMO EQUIPO</p>
+          <h2>Catálogo <span>NEXUS</span></h2>
+        </div>
+        <p class="muted">Tecnología para cada presupuesto.</p>
+      </div>
+
+      <label class="search-label" for="search">
+        Buscar productos
+      </label>
+      <input
+        id="search"
+        class="search-input"
+        type="search"
+        placeholder="Buscar laptop, RTX, teléfono..."
+        autocomplete="off"
+      >
+
+      <div class="filters" role="group" aria-label="Filtrar por categoría">
+        <button class="filter active" data-category="Todos" aria-pressed="true">Todos</button>
+        <button class="filter" data-category="Desktops" aria-pressed="false">Desktops</button>
+        <button class="filter" data-category="Workstations" aria-pressed="false">Workstations</button>
+        <button class="filter" data-category="Laptops" aria-pressed="false">Laptops</button>
+        <button class="filter" data-category="Móviles" aria-pressed="false">Móviles</button>
+      </div>
+
+      <div class="sort-row">
+        <span id="results-count" aria-live="polite">Productos</span>
+        <label for="sort">Ordenar:</label>
+        <select id="sort">
+          <option value="featured">Destacados</option>
+          <option value="low">Precio: menor a mayor</option>
+          <option value="high">Precio: mayor a menor</option>
+          <option value="name">Nombre: A-Z</option>
+        </select>
+      </div>
+
+      <div id="product-grid" class="product-grid">
+        <p>Cargando catálogo...</p>
+      </div>
+    </section>
+
+    <section class="payment-section" id="pagos">
+      <p class="eyebrow">COMPRA CON CONFIANZA</p>
+      <h2>Opciones de <span>pago</span></h2>
+      <div class="payment-grid">
+        <article class="payment-card">
+          <span class="payment-icon">💳</span>
+          <h3>Tarjetas</h3>
+          <p>Visa, Mastercard y otras tarjetas mediante un proveedor de pagos compatible.</p>
+        </article>
+        <article class="payment-card">
+          <span class="payment-icon">🅿️</span>
+          <h3>PayPal</h3>
+          <p>Opción de pago mediante una integración segura de PayPal.</p>
+        </article>
+        <article class="payment-card">
+          <span class="payment-icon">🔒</span>
+          <h3>Compra segura</h3>
+          <p>Los datos de las tarjetas no deben guardarse en esta página.</p>
+        </article>
+      </div>
+      <p class="notice">
+        Los pagos reales requieren configurar una cuenta y una integración
+        con PayPal, Stripe u otro proveedor. Estas opciones son informativas
+        hasta que se configure esa integración.
+      </p>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <p class="eyebrow">¿NECESITAS AYUDA?</p>
+      <h2>Hablemos de <span>tecnología</span></h2>
+      <p>¿Buscas un equipo específico? Escríbenos.</p>
+      <a class="primary-button"
+         href="mailto:ventas@tudominio.com?subject=Consulta%20de%20productos">
+        Contactar por correo
+      </a>
+      <p class="muted small">
+        Cambia ventas@tudominio.com por tu dirección comercial.
+      </p>
+    </section>
+  </main>
+
+  <aside id="cart-panel" class="cart-panel" hidden
+    aria-labelledby="cart-title">
+    <div class="cart-heading">
+      <h2 id="cart-title">Tu carrito</h2>
+      <button id="cart-close" class="icon-button"
+        aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cart-total">$0.00</strong></p>
+      <button id="checkout" class="primary-button full-width">
+        Continuar compra
+      </button>
+      <p class="muted small">
+        Catálogo de demostración: no se realiza ningún cobro.
+      </p>
+    </div>
+  </aside>
+  <button id="cart-backdrop" class="cart-backdrop" hidden
+    aria-label="Cerrar carrito"></button>
+
+  <footer class="footer">
+    <a class="logo" href="#inicio">NEXUS<span>GG</span></a>
+    <p>© <span id="year"></span> Nexus Gaming Store.</p>
+    <p>Tu próximo nivel comienza aquí.</p>
+  </footer>
+</body>
+</html>
