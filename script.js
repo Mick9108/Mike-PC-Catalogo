@@ -558,3 +558,8 @@ const newProducts = [
   }
 ];
 products.push(...newProducts);
+// Actualizar el catálogo con todos los productos.
+renderProducts();
+renderCart();
+
+console.log("NEXUS GAMING STORE: " + products.length + " productos cargados.");
