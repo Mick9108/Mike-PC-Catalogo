@@ -107,9 +107,9 @@ const products = [
 
 // Estado de la tienda
 let activeCategory = "Todos";
-let searchTerm = "";
-let sortMode = "featured";
-const cart = new Map();
+let searchTerm = "";category: "Móviles",
+let sortMode = "featured";category: "Móviles",
+const cart = new Map();category: "Móviles",
 
 const productGrid = document.getElementById("product-grid");
 const searchInput = document.getElementById("search");
