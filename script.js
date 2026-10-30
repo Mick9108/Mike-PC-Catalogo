@@ -452,10 +452,6 @@ document.getElementById("checkout").addEventListener("click", () => {
 document.getElementById("year").textContent =
   String(new Date().getFullYear());
 
-// Iniciar la tienda.
-renderProducts();
-renderCart();
-
 const newProducts = [
   // DESKTOPS
   {
