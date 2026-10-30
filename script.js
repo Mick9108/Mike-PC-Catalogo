@@ -561,3 +561,4 @@ const newProducts = [
     description: "Monitoreo de actividad y notificaciones inteligentes."
   }
 ];
+products.push(...newProducts);
