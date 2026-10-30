@@ -410,16 +410,40 @@ h2 {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s ease;
 }
 
-.payment-icon {
-  font-size: 2rem;
+.payment-card:hover {
+  border-color: var(--muted);
 }
 
-.payment-card p,
-.contact-section > p:not(.eyebrow) {
+.payment-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: default;
+}
+
+.payment-card p {
   color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
 }
+
+/* Eliminar espacio de los antiguos iconos */
+.payment-icon {
+  display: none;
+}
+
+
 
 .notice {
   color: var(--muted);
