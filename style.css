@@ -659,3 +659,21 @@ h2 {
     transition-duration: .01ms !important;
   }
 }
+
+/* Corrección visual de los métodos de pago */
+.payment-card,
+.payment-card * {
+  cursor: default !important;
+  caret-color: transparent !important;
+  user-select: text;
+}
+
+.payment-card h3,
+.payment-card p {
+  display: block;
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
