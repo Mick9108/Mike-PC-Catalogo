@@ -455,3 +455,109 @@ document.getElementById("year").textContent =
 // Iniciar la tienda.
 renderProducts();
 renderCart();
+
+const newProducts = [
+  // DESKTOPS
+  {
+    id: 101,
+    name: "Gaming Desktop RTX 4060",
+    category: "Desktops",
+    price: 1099.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Gaming+Desktop",
+    description: "Intel Core i5, 16GB RAM, 1TB SSD, RTX 4060."
+  },
+  {
+    id: 102,
+    name: "Business Desktop Pro",
+    category: "Desktops",
+    price: 649.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Business+Desktop",
+    description: "Intel Core i5, 16GB RAM, 512GB SSD."
+  },
+  {
+    id: 103,
+    name: "Mini PC Performance",
+    category: "Desktops",
+    price: 449.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Mini+PC",
+    description: "AMD Ryzen 5, 16GB RAM, 512GB SSD."
+  },
+
+  // WORKSTATIONS
+  {
+    id: 104,
+    name: "Workstation Creator",
+    category: "Workstations",
+    price: 1899.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Creator+Workstation",
+    description: "Intel Core i7, 32GB RAM, 1TB SSD, RTX graphics."
+  },
+  {
+    id: 105,
+    name: "Professional Workstation",
+    category: "Workstations",
+    price: 2499.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Professional+PC",
+    description: "Intel Xeon, 64GB RAM, 2TB SSD."
+  },
+  {
+    id: 106,
+    name: "Engineering Workstation",
+    category: "Workstations",
+    price: 3299.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Engineering+PC",
+    description: "AMD Ryzen 9, 64GB RAM, 2TB SSD, RTX graphics."
+  },
+
+  // LAPTOPS
+  {
+    id: 107,
+    name: "Business Laptop 15",
+    category: "Laptops",
+    price: 749.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Business+Laptop",
+    description: "Intel Core i5, 16GB RAM, 512GB SSD."
+  },
+  {
+    id: 108,
+    name: "Gaming Laptop RTX",
+    category: "Laptops",
+    price: 1399.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Gaming+Laptop",
+    description: "Intel Core i7, 16GB RAM, 1TB SSD, RTX graphics."
+  },
+  {
+    id: 109,
+    name: "Ultrabook Air",
+    category: "Laptops",
+    price: 999.99,
+    image: "https://placehold.co/600x400/111522/22d3ee?text=Ultrabook",
+    description: "AMD Ryzen 7, 16GB RAM, 1TB SSD."
+  },
+
+  // DISPOSITIVOS MOVILES
+  {
+    id: 110,
+    name: "Smartphone Pro",
+    category: "Dispositivos móviles",
+    price: 899.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Smartphone",
+    description: "256GB almacenamiento, pantalla AMOLED."
+  },
+  {
+    id: 111,
+    name: "Professional Tablet",
+    category: "Dispositivos móviles",
+    price: 549.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Tablet",
+    description: "128GB almacenamiento, pantalla de alta resolución."
+  },
+  {
+    id: 112,
+    name: "Smartwatch Series",
+    category: "Dispositivos móviles",
+    price: 199.99,
+    image: "https://placehold.co/600x400/111522/a855f7?text=Smartwatch",
+    description: "Monitoreo de actividad y notificaciones inteligentes."
+  }
+];
