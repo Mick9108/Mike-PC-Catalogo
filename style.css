@@ -442,9 +442,6 @@ h2 {
 .payment-icon {
   display: none;
 }
-
-
-
 .notice {
   color: var(--muted);
   font-size: .9rem;
