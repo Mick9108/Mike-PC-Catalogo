@@ -531,7 +531,7 @@ const newProducts = [
     description: "AMD Ryzen 7, 16GB RAM, 1TB SSD."
   },
 
-  // DISPOSITIVOS MOVILES
+  // category: "Móviles",
   {
     id: 110,
     name: "Smartphone Pro",
