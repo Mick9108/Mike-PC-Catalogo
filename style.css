@@ -2,126 +2,98 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #f2f2f2;
-  background-color: #04070d;
-  /* Tema tecnológico en movimiento: rejilla y luces que se desplazan */
+  color: #e8f5ec;
+  background-color: #08120c;
+  /* Temática tipo motherboard: placa verde oscura con pistas de circuito */
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(0,207,255,0.18) 0%, transparent 42%),
-    radial-gradient(circle at 80% 0%, rgba(0,255,170,0.12) 0%, transparent 38%),
-    linear-gradient(rgba(0,207,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,207,255,0.08) 1px, transparent 1px),
-    linear-gradient(180deg, #071018 0%, #04070d 60%, #02040a 100%);
-  background-size: auto, auto, 44px 44px, 44px 44px, auto;
-  animation: rejillaMovimiento 12s linear infinite;
-}
-@keyframes rejillaMovimiento {
-  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
-  to { background-position: 0 0, 0 0, 44px 44px, 44px 0, 0 0; }
+    radial-gradient(circle at 15% 10%, rgba(34,197,94,0.16) 0%, transparent 40%),
+    linear-gradient(rgba(74,222,128,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,222,128,0.10) 1px, transparent 1px),
+    linear-gradient(rgba(212,175,55,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #0d2418 0%, #08120c 60%, #050d08 100%);
+  background-size: auto, 48px 48px, 48px 48px, 12px 12px, 12px 12px, auto;
 }
 .encabezado {
   text-align: center;
   padding: 36px 16px 24px;
-  /* Degradado tecnológico que se mueve de lado a lado */
-  background: linear-gradient(90deg, #001524, #003a5e, #00cfff, #003a5e, #001524);
-  background-size: 300% 100%;
-  animation: encabezadoMovimiento 8s linear infinite;
-  border-bottom: 2px solid #00cfff;
-  box-shadow: 0 0 24px rgba(0,207,255,0.35);
+  background: linear-gradient(180deg, #12351f, #0a1f13);
+  border-bottom: 3px solid #d4af37;
+  box-shadow: 0 4px 0 #1e5c34, 0 10px 24px rgba(0,0,0,0.55);
 }
-@keyframes encabezadoMovimiento {
-  from { background-position: 0% 0; }
-  to { background-position: 300% 0; }
+.encabezado h1 {
+  margin: 0 0 10px; font-size: 34px; letter-spacing: 1px;
+  font-family: "Courier New", Courier, monospace; color: #a7f3d0;
 }
-.encabezado h1 { margin: 0 0 10px; font-size: 34px; letter-spacing: 0.5px; text-shadow: 0 0 14px rgba(0,207,255,0.7); }
-.encabezado p { max-width: 820px; margin: 0 auto; color: #e6f7ff; line-height: 1.5; }
+.encabezado p { max-width: 820px; margin: 0 auto; color: #d1fae5; line-height: 1.5; }
 .info-tipos { max-width: 1100px; margin: 24px auto 0; padding: 0 16px; }
-.info-tipos h2, .pagos h2 { color: #ffffff; }
+.info-tipos h2, .pagos h2 { color: #a7f3d0; font-family: "Courier New", Courier, monospace; }
 .tipos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
 .tipo {
-  background: linear-gradient(180deg, #12202e, #0a121c);
-  border: 1px solid #1e4a63;
-  border-top: 3px solid #00cfff;
-  border-radius: 10px;
+  background: #12291b;
+  border: 1px solid #2f6b4a;
+  border-top: 3px solid #d4af37;
+  border-radius: 6px;
   padding: 14px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.55);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.5);
 }
-.tipo h3 { margin: 0 0 8px; }
-.tipo p { margin: 6px 0; color: #d9d9d9; line-height: 1.45; }
-.nota-tipos { color: #c9c9c9; line-height: 1.5; }
+.tipo h3 { margin: 0 0 8px; font-family: "Courier New", Courier, monospace; color: #a7f3d0; }
+.tipo p { margin: 6px 0; color: #d9eadd; line-height: 1.45; }
+.nota-tipos { color: #c9d8cc; line-height: 1.5; }
 .controles { max-width: 1100px; margin: 18px auto 0; padding: 0 16px; }
 #buscador {
-  width: 100%; padding: 13px 14px; font-size: 16px; border-radius: 8px;
-  border: 1px solid #2a6a88; background: #0d1824; color: #fff; outline: none;
+  width: 100%; padding: 13px 14px; font-size: 16px; border-radius: 6px;
+  border: 1px solid #2f6b4a; background: #0f2418; color: #fff; outline: none;
 }
-#buscador:focus { border-color: #00cfff; box-shadow: 0 0 14px rgba(0,207,255,0.6); }
+#buscador:focus { border-color: #d4af37; box-shadow: 0 0 0 2px rgba(212,175,55,0.35); }
 .filtros { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
 .filtro {
-  padding: 9px 14px; border-radius: 20px; border: 1px solid #2a6a88;
-  background: #0d1824; color: #fff; cursor: pointer; font-size: 14px;
+  padding: 9px 14px; border-radius: 6px; border: 1px solid #2f6b4a;
+  background: #12291b; color: #e8f5ec; cursor: pointer; font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
 }
-.filtro:hover { border-color: #00cfff; box-shadow: 0 0 10px rgba(0,207,255,0.5); }
-.filtro.activo {
-  background: #00cfff; color: #000; border-color: #00cfff; font-weight: bold;
-  animation: pulso 2s ease-in-out infinite;
-}
-@keyframes pulso {
-  0%, 100% { box-shadow: 0 0 8px rgba(0,207,255,0.5); }
-  50% { box-shadow: 0 0 20px rgba(0,207,255,0.9); }
-}
+.filtro:hover { border-color: #d4af37; }
+.filtro.activo { background: #22c55e; color: #04120a; border-color: #22c55e; font-weight: bold; }
 .selectores { display: flex; flex-wrap: wrap; gap: 16px; }
 .selectores label { font-size: 14px; color: #ddd; }
 .selectores select {
   margin-left: 6px; padding: 8px; border-radius: 6px;
-  background: #0d1824; color: #fff; border: 1px solid #2a6a88;
+  background: #0f2418; color: #fff; border: 1px solid #2f6b4a;
 }
-#contador { max-width: 1100px; margin: 18px auto 0; padding: 0 16px; color: #ddd; font-weight: bold; }
+#contador { max-width: 1100px; margin: 18px auto 0; padding: 0 16px; color: #d1fae5; font-weight: bold; font-family: "Courier New", Courier, monospace; }
 .grid {
   max-width: 1100px; margin: 12px auto 30px; padding: 0 16px;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
 }
 .tarjeta {
-  position: relative;
-  background: linear-gradient(180deg, rgba(0,207,255,0.08), rgba(255,255,255,0) 28%), #0e1620;
-  border: 1px solid #1e4a63; border-radius: 12px; overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.55);
+  background: #12291b;
+  border: 1px solid #2f6b4a;
+  border-top: 3px solid #22c55e;
+  border-radius: 6px; overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
 }
-.tarjeta:hover { border-color: #00cfff; transform: translateY(-2px); box-shadow: 0 0 18px rgba(0,207,255,0.4); }
-/* Barrido de luz que cruza cada tarjeta, en movimiento */
-.tarjeta::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(105deg, transparent 40%, rgba(0,207,255,0.14) 50%, transparent 60%);
-  transform: translateX(-100%);
-  animation: barrido 5s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes barrido {
-  0%, 60% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-.tarjeta img { width: 100%; height: 180px; object-fit: cover; display: block; background: #222; }
-.tarjeta .contenido { padding: 14px; position: relative; }
+.tarjeta:hover { border-color: #d4af37; transform: translateY(-2px); }
+.tarjeta img { width: 100%; height: 180px; object-fit: cover; display: block; background: #0a1f13; border-bottom: 1px solid #2f6b4a; }
+.tarjeta .contenido { padding: 14px; }
 .etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
 .etiqueta {
-  font-size: 12px; padding: 4px 9px; border-radius: 12px;
-  background: #0d1824; border: 1px solid #2a6a88; color: #eee;
+  font-size: 12px; padding: 4px 9px; border-radius: 4px;
+  background: #0f2418; border: 1px solid #2f6b4a; color: #e8f5ec;
+  font-family: "Courier New", Courier, monospace;
 }
-.etiqueta.original { background: #0a3d4d; border-color: #00cfff; }
-.etiqueta.refaccion { background: #4d3a00; border-color: #ffcc00; }
-.tarjeta h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.3; }
-.tarjeta p { margin: 6px 0; color: #d4d4d4; line-height: 1.45; font-size: 14px; }
-.precio { font-size: 24px; font-weight: bold; color: #00e676; margin: 10px 0; text-shadow: 0 0 10px rgba(0,230,118,0.6); }
+.etiqueta.original { background: #12351f; border-color: #22c55e; }
+.etiqueta.refaccion { background: #3a2f08; border-color: #d4af37; }
+.tarjeta h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.3; font-family: "Courier New", Courier, monospace; color: #a7f3d0; }
+.tarjeta p { margin: 6px 0; color: #d4e5d8; line-height: 1.45; font-size: 14px; }
+.precio { font-size: 24px; font-weight: bold; color: #4ade80; margin: 10px 0; }
 .especs { list-style: none; padding: 0; margin: 10px 0 0; }
-.especs li { font-size: 13px; color: #cfcfcf; padding: 4px 0; border-top: 1px solid #1e3446; line-height: 1.4; }
+.especs li { font-size: 13px; color: #cfe3d3; padding: 4px 0; border-top: 1px solid #244d33; line-height: 1.4; }
 .especs li strong { color: #fff; }
-.pagos { max-width: 1100px; margin: 0 auto 30px; padding: 20px; background: #0a121c; border: 1px solid #1e4a63; border-radius: 12px; }
-.pagos p { color: #d9d9d9; line-height: 1.5; }
+.pagos { max-width: 1100px; margin: 0 auto 30px; padding: 20px; background: #12291b; border: 1px solid #2f6b4a; border-radius: 6px; }
+.pagos p { color: #d9eadd; line-height: 1.5; }
 .pagos ul { columns: 2; line-height: 1.9; }
-footer { text-align: center; padding: 20px 16px 30px; color: #aaa; line-height: 1.5; border-top: 1px solid #1e4a63; }
+footer { text-align: center; padding: 20px 16px 30px; color: #a8bfae; line-height: 1.5; border-top: 1px solid #2f6b4a; }
 @media (max-width: 600px) {
   .encabezado h1 { font-size: 26px; }
   .pagos ul { columns: 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  body, .encabezado, .filtro.activo, .tarjeta::after { animation: none; }
 }
