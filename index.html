@@ -1,3 +1,114 @@
 
 
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Computadoras y Piezas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="encabezado">
+<h1>Catálogo de Computadoras y Piezas</h1>
+<p>Computadoras completas y piezas originales y de refacción, desde lo más económico hasta lo más avanzado. Busca, filtra y ordena por precio.</p>
+</header>
+
+<section class="info-tipos">
+<h2>Tipos de computadora</h2>
+<div class="tipos-grid">
+<div class="tipo">
+<h3>Desktop</h3>
+<p><strong>Ventaja:</strong> Flexibilidad de configuración.</p>
+<p><strong>Limitación:</strong> Requiere espacio y alimentación eléctrica.</p>
+</div>
+<div class="tipo">
+<h3>Laptop</h3>
+<p><strong>Ventaja:</strong> Portabilidad.</p>
+<p><strong>Limitación:</strong> Expansión y refrigeración dependen del diseño.</p>
+</div>
+<div class="tipo">
+<h3>Workstation</h3>
+<p><strong>Ventaja:</strong> Capacidad para aplicaciones profesionales exigentes.</p>
+<p><strong>Limitación:</strong> Costo y componentes especializados.</p>
+</div>
+<div class="tipo">
+<h3>Dispositivo móvil</h3>
+<p><strong>Ventaja:</strong> Movilidad y conectividad.</p>
+<p><strong>Limitación:</strong> Limitaciones de expansión y reparación.</p>
+</div>
+</div>
+<p class="nota-tipos">En cada computadora del catálogo verás también: CPU, RAM, SSD / HDD, GPU, Conectividad, Expansión y Compatibilidad.</p>
+</section>
+
+<section class="controles">
+<input type="text" id="buscador" placeholder="Buscar: ejemplo, gaming, SSD, Ryzen, laptop...">
+<div class="filtros" id="filtros">
+<button class="filtro activo" data-categoria="Todos">Todos</button>
+<button class="filtro" data-categoria="Desktop">Desktop</button>
+<button class="filtro" data-categoria="Laptop">Laptop</button>
+<button class="filtro" data-categoria="Workstation">Workstation</button>
+<button class="filtro" data-categoria="Móvil">Móvil</button>
+<button class="filtro" data-categoria="CPU">CPU</button>
+<button class="filtro" data-categoria="RAM">RAM</button>
+<button class="filtro" data-categoria="Almacenamiento">SSD / HDD</button>
+<button class="filtro" data-categoria="GPU">GPU</button>
+<button class="filtro" data-categoria="Conectividad">Conectividad</button>
+<button class="filtro" data-categoria="Expansión">Expansión</button>
+</div>
+<div class="selectores">
+<label>Tipo de pieza:
+<select id="filtro-tipo">
+<option value="Todos">Todos</option>
+<option value="Original">Original</option>
+<option value="Refacción">Refacción</option>
+<option value="Equipo completo">Equipo completo</option>
+</select>
+</label>
+<label>Rango de precio:
+<select id="filtro-precio">
+<option value="Todos">Todos los precios</option>
+<option value="economico">Hasta $200</option>
+<option value="medio">$201 a $700</option>
+<option value="alto">$701 a $1,500</option>
+<option value="premium">Más de $1,500</option>
+</select>
+</label>
+<label>Ordenar por:
+<select id="orden">
+<option value="relevancia">Relevancia</option>
+<option value="menor">Precio: menor a mayor</option>
+<option value="mayor">Precio: mayor a menor</option>
+<option value="nombre">Nombre A-Z</option>
+</select>
+</label>
+</div>
+</section>
+
+<p id="contador"></p>
+<main id="productos" class="grid"></main>
+
+<section class="pagos">
+<h2>Métodos de pago aceptados</h2>
+<p>Sin cargos ocultos en el catálogo. El método se confirma al momento de la compra.</p>
+<ul>
+<li>Visa</li>
+<li>Mastercard</li>
+<li>American Express</li>
+<li>PayPal</li>
+<li>ATH Móvil</li>
+<li>Apple Pay</li>
+<li>Google Pay</li>
+<li>Transferencia bancaria</li>
+<li>Pago en tienda al recoger</li>
+</ul>
+</section>
+
+<footer>
+<p>Precios en USD. Las piezas marcadas como Refacción son piezas de repuesto reacondicionadas y verificadas, a menor precio que la versión Original. Las imágenes son enlaces de la web y pueden variar según disponibilidad.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
